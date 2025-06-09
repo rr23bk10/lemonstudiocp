@@ -1,376 +1,253 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Melhorado - Soluções Digitais Modernas</title>
-    <meta name="description" content="Sua solução completa para desenvolvimento web, aplicativos mobile e marketing digital. Transformamos suas ideias em realidade.">
+    <meta name="description" content="Lemon Studio CP - Criação de games, sites e softwares surrealistas. Transformamos ideias em experiências digitais extraordinárias.">
+    <meta name="keywords" content="games, sites, softwares, desenvolvimento web, marketing digital, design gráfico, branding, consultoria digital">
+    <title>Lemon Studio CP</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Adicione o FontAwesome para ícones de redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loader">
-            <div class="loader-circle"></div>
-            <div class="loader-text">Carregando...</div>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo da Lemon Studio CP" width="150" height="50">
         </div>
-    </div>
-
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-rocket"></i>
-                <span>DigitalPro</span>
+        <nav>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#descricao-missao-visao">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#pacotes">Pacotes</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-                <div class="menu-toggle" onclick="toggleMenu()" aria-label="Menu de navegação">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
+        </nav>
     </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-particles"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="highlight">Transformamos</span> suas ideias em
-                    <span class="typing-text">realidade digital</span>
-                </h1>
-                <p class="hero-subtitle">Soluções completas em desenvolvimento web, aplicativos mobile e marketing digital para impulsionar seu negócio no mundo digital.</p>
-                <div class="hero-buttons">
-                    <a href="#servicos" class="btn btn-primary">Nossos Serviços</a>
-                    <a href="#portfolio" class="btn btn-secondary">Ver Portfolio</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-card card-1">
-                    <i class="fas fa-code"></i>
-                    <span>Desenvolvimento</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Mobile</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Marketing</span>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
+    
+    <!-- Seção Home -->
+    <section id="home">
+        <div class="content">
+            <h2>Bem-vindo à Lemon Studio CP</h2>
+            <p>Criação de games, sites e softwares surrealistas</p>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="sobre" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sobre Nós</h2>
-                <p>Conheça nossa história e valores</p>
+    
+    <!-- Seção Sobre -->
+    <section id="descricao-missao-visao">
+        <div class="descricao">
+            <h2>Sobre a Lemon Studio CP</h2>
+            <p>Transformamos ideias em experiências digitais extraordinárias. Nosso time é dedicado a oferecer soluções criativas e inovadoras que atendem às necessidades específicas do seu negócio, com foco em eficiência.</p>
+        </div>
+        
+        <div class="missao-visao">
+            <div class="missao">
+                <h3>Missão</h3>
+                <p>Nosso objetivo é proporcionar soluções digitais personalizadas que impulsionem o crescimento e a inovação de nossos clientes, tornando-os mais competitivos e relevantes no mercado digital.</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Quem Somos</h3>
-                    <p>Somos uma equipe apaixonada por tecnologia e inovação, dedicada a transformar ideias em soluções digitais excepcionais. Com anos de experiência no mercado, oferecemos serviços de alta qualidade que impulsionam o crescimento dos nossos clientes.</p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="150">0</div>
-                            <div class="stat-label">Projetos Concluídos</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="98">0</div>
-                            <div class="stat-label">% Satisfação</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-target="5">0</div>
-                            <div class="stat-label">Anos de Experiência</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-values">
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4>Inovação</h4>
-                        <p>Sempre buscamos as tecnologias mais avançadas para entregar soluções inovadoras.</p>
-                    </div>
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h4>Colaboração</h4>
-                        <p>Trabalhamos em parceria com nossos clientes para alcançar os melhores resultados.</p>
-                    </div>
-                    <div class="value-item">
-                        <div class="value-icon">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>Excelência</h4>
-                        <p>Comprometidos com a qualidade e perfeição em cada projeto que desenvolvemos.</p>
-                    </div>
-                </div>
+            
+            <div class="visao">
+                <h3>Visão</h3>
+                <p>Ser uma referência em inovação e excelência na criação de soluções digitais, com o compromisso de transformar as ideias de nossos clientes em resultados reais e duradouros.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="servicos" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nossos Serviços</h2>
-                <p>Soluções completas para sua presença digital</p>
+    <!-- Seção Serviços -->
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="servicos-container">
+            <div class="servico">
+                <h3>Consultoria em Transformação Digital</h3>
+                <p>Nossa consultoria em transformação digital ajuda sua empresa a adotar novas tecnologias e estratégias digitais para otimizar processos, aumentar a produtividade e melhorar a experiência do cliente.</p>
             </div>
-            <div class="service-grid">
-                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Criamos sites modernos, responsivos e otimizados para SEO, utilizando as mais recentes tecnologias do mercado.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Design Responsivo</li>
-                        <li><i class="fas fa-check"></i> Otimização SEO</li>
-                        <li><i class="fas fa-check"></i> Performance Otimizada</li>
-                    </ul>
-                    <a href="#contato" class="service-btn">Saiba Mais</a>
-                </div>
-                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Aplicativos Mobile</h3>
-                    <p>Desenvolvemos aplicativos nativos e híbridos para iOS e Android com foco na experiência do usuário.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> iOS & Android</li>
-                        <li><i class="fas fa-check"></i> UX/UI Moderno</li>
-                        <li><i class="fas fa-check"></i> Integração API</li>
-                    </ul>
-                    <a href="#contato" class="service-btn">Saiba Mais</a>
-                </div>
-                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Marketing Digital</h3>
-                    <p>Estratégias personalizadas para aumentar sua presença online e gerar mais leads e vendas.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i> SEO & SEM</li>
-                        <li><i class="fas fa-check"></i> Redes Sociais</li>
-                        <li><i class="fas fa-check"></i> Analytics</li>
-                    </ul>
-                    <a href="#contato" class="service-btn">Saiba Mais</a>
-                </div>
+            <div class="servico">
+                <h3>Desenvolvimento Web</h3>
+                <p>Criamos sites personalizados e otimizados para fornecer uma experiência de usuário excepcional. Seja para um blog, uma loja virtual ou um site corporativo, garantimos que seu projeto seja visualmente atraente, funcional e fácil de usar.</p>
+            </div>
+            <div class="servico">
+                <h3>Marketing Digital</h3>
+                <p>Nosso serviço de marketing digital visa aumentar a visibilidade e o engajamento da sua marca online. Utilizamos estratégias comprovadas, como SEO, mídias sociais, anúncios pagos e e-mail marketing.</p>
+            </div>
+            <div class="servico">
+                <h3>Gestão de Inovação</h3>
+                <p>A gestão de inovação permite que sua empresa se destaque no mercado, identificando e implementando soluções criativas que impulsionam o crescimento e a diferenciação.</p>
+            </div>
+            <div class="servico">
+                <h3>Desenvolvimento de Aplicativos</h3>
+                <p>Nossos aplicativos móveis são criados para melhorar a interação com seus clientes, oferecendo uma experiência intuitiva e fluida.</p>
+            </div>
+            <div class="servico">
+                <h3>Suporte Técnico e TI</h3>
+                <p>Oferecemos suporte técnico especializado para resolver problemas de TI rapidamente e garantir que seus sistemas funcionem sem falhas.</p>
+            </div>
+            <div class="servico">
+                <h3>Análise de Dados e Business Intelligence</h3>
+                <p>Ajudamos sua empresa a tomar decisões mais informadas com análises de dados detalhadas e relatórios personalizados.</p>
+            </div>
+            <div class="servico">
+                <h3>Design Gráfico e Branding</h3>
+                <p>Criamos designs criativos e personalizados que capturam a essência da sua marca.</p>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nosso Portfolio</h2>
-                <p>Alguns dos nossos trabalhos mais recentes</p>
+    <!-- Seção Nossos Pacotes -->
+    <section id="pacotes">
+        <h2>Nossos Pacotes</h2>
+        <div class="pacotes-container">
+            <!-- Mini Pack -->
+            <div class="pacote">
+                <i class="fas fa-gem"></i>
+                <h3>Mini Pack</h3>
+                <p class="preco">R$ 250</p>
+                <p class="descricao">Ideal para quem está começando.</p>
+                <ul>
+                    <li>Logo básico.</li>
+                    <li>1 post e 1 story para Instagram.</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Freelancers, microempreendedores e projetos pessoais.</p>
             </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-image"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>E-commerce Moderno</h4>
-                            <p>Plataforma completa de vendas online</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>App de Delivery</h4>
-                            <p>Aplicativo para entrega de comida</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Dashboard Analytics</h4>
-                            <p>Sistema de análise de dados</p>
-                            <a href="#" class="portfolio-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Essentials Pack -->
+            <div class="pacote">
+                <i class="fas fa-star"></i>
+                <h3>Essentials Pack</h3>
+                <p class="preco">R$ 750</p>
+                <p class="descricao">Presença online profissional.</p>
+                <ul>
+                    <li>Logo + paleta de cores + tipografia.</li>
+                    <li>Site one-page simples.</li>
+                    <li>3 artes para redes sociais.</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Pequenos negócios e profissionais autônomos.</p>
+            </div>
+
+            <!-- Business Pack -->
+            <div class="pacote">
+                <i class="fas fa-rocket"></i>
+                <h3>Business Pack</h3>
+                <p class="preco">R$ 2.500</p>
+                <p class="descricao">Identidade visual completa e site funcional.</p>
+                <ul>
+                    <li>Branding completo (logo, cores, tipografia, manual da marca).</li>
+                    <li>Site multi-page (até 3 páginas).</li>
+                    <li>5 artes para redes sociais + cartão de visita.</li>
+                    <li>1 reunião de consultoria criativa.</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Pequenas empresas e startups.</p>
+            </div>
+
+            <!-- Premium Pack -->
+            <div class="pacote">
+                <i class="fas fa-crown"></i>
+                <h3>Premium Pack</h3>
+                <p class="preco">R$ 7.500</p>
+                <p class="descricao">Soluções completas para se destacar.</p>
+                <ul>
+                    <li>Branding premium (elementos gráficos exclusivos).</li>
+                    <li>Site multi-page (até 5 páginas).</li>
+                    <li>10 artes para redes sociais + design de embalagem.</li>
+                    <li>2 reuniões de consultoria criativa.</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Empresas em expansão.</p>
+            </div>
+
+            <!-- Master Pack -->
+            <div class="pacote">
+                <i class="fas fa-trophy"></i>
+                <h3>Master Pack</h3>
+                <p class="preco">R$ 25.000</p>
+                <p class="descricao">Excelência e sofisticação.</p>
+                <ul>
+                    <li>Branding premium + ícones personalizados.</li>
+                    <li>Site avançado com e-commerce.</li>
+                    <li>20 artes para redes sociais + embalagens premium.</li>
+                    <li>3 reuniões de consultoria + suporte pós-entrega (1 mês).</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Empresas estabelecidas.</p>
+            </div>
+
+            <!-- Tech Pack -->
+            <div class="pacote">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Tech Pack</h3>
+                <p class="preco">R$ 75.000</p>
+                <p class="descricao">Inovação e tecnologia.</p>
+                <ul>
+                    <li>Desenvolvimento de app ou game.</li>
+                    <li>Branding completo + site avançado integrado.</li>
+                    <li>20 artes para redes sociais + materiais promocionais.</li>
+                    <li>4 reuniões de consultoria + suporte pós-entrega (3 meses).</li>
+                </ul>
+                <p class="perfeito-para"><strong>Perfeito para:</strong> Empresas que buscam soluções digitais avançadas.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contato" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Vamos transformar sua ideia em realidade</p>
+    <!-- Seção Galeria de Empresas Atendidas -->
+    <section id="galeria">
+        <h2>Empresas Atendidas</h2>
+        <div class="galeria-container">
+            <div class="galeria-item">
+                <img src="images/empresa1.png" alt="Logo da Empresa 1">
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Fale Conosco</h3>
-                    <p>Estamos prontos para ouvir suas ideias e transformá-las em soluções digitais incríveis.</p>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>contato@digitalpro.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(11) 99999-9999</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>São Paulo, SP - Brasil</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <form class="contact-form" onsubmit="return validateForm(event)">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nome">Nome Completo</label>
-                            <input type="text" id="nome" name="nome" required>
-                            <span class="form-error" id="nome-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="form-error" id="email-error"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="assunto">Assunto</label>
-                        <select id="assunto" name="assunto" required>
-                            <option value="">Selecione um assunto</option>
-                            <option value="desenvolvimento-web">Desenvolvimento Web</option>
-                            <option value="app-mobile">Aplicativo Mobile</option>
-                            <option value="marketing-digital">Marketing Digital</option>
-                            <option value="outros">Outros</option>
-                        </select>
-                        <span class="form-error" id="assunto-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Conte-nos sobre seu projeto..."></textarea>
-                        <span class="form-error" id="mensagem-error"></span>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <span class="btn-text">Enviar Mensagem</span>
-                        <span class="btn-loading">
-                            <i class="fas fa-spinner fa-spin"></i>
-                            Enviando...
-                        </span>
-                    </button>
-                </form>
+            <div class="galeria-item">
+                <img src="images/empresa2.png" alt="Logo da Empresa 2">
+            </div>
+            <div class="galeria-item">
+                <img src="images/empresa3.png" alt="Logo da Empresa 3">
+            </div>
+            <div class="galeria-item">
+                <img src="images/empresa4.png" alt="Logo da Empresa 4">
+            </div>
+            <div class="galeria-item">
+                <img src="images/empresa5.png" alt="Logo da Empresa 5">
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p class="contato-texto">Tem alguma dúvida ou quer saber mais sobre nossos serviços? Preencha o formulário abaixo e entraremos em contato com você o mais rápido possível!</p>
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Seu e-mail">
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Sua mensagem"></textarea>
+            </div>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-rocket"></i>
-                        <span>DigitalPro</span>
-                    </div>
-                    <p>Transformando ideias em soluções digitais excepcionais desde 2019.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Serviços</h4>
-                    <ul>
-                        <li><a href="#servicos">Desenvolvimento Web</a></li>
-                        <li><a href="#servicos">Aplicativos Mobile</a></li>
-                        <li><a href="#servicos">Marketing Digital</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Empresa</h4>
-                    <ul>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-envelope"></i> contato@digitalpro.com</p>
-                        <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
-                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DigitalPro. Todos os direitos reservados.</p>
-                <p>Desenvolvido com <i class="fas fa-heart"></i> pela equipe DigitalPro</p>
-            </div>
+        <p><a href="https://www.sisgama.com">Visite nossa comunidade</a></p>
+        <div class="social-links">
+            <a href="https://facebook.com/lemonstudiocp" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/lemonstudiocp" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/lemonstudiocp" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
+        <p>&copy; 2025 Lemon Studio CP. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
-
