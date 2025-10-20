@@ -1,0 +1,523 @@
+/* Reset e Estilo Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f7d347;
+}
+
+/* Menu Hambúrguer para Mobile */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header nav.active ul {
+        display: flex;
+    }
+}
+
+/* Seção Home */
+#home {
+    background-image: url('images/fundo2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding: 0 20px;
+}
+
+#home .content h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    border-right: 3px solid #fff;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40) 1s forwards, blink 0.7s step-end infinite;
+    color: #f7d347;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#home .content p {
+    font-size: 22px;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeIn 1s 6s forwards, highlightText 2s infinite alternate;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Animações */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes highlightText {
+    0% { color: #f7d347; }
+    50% { color: #ff6600; }
+    100% { color: #f7d347; }
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #home .content h2 {
+        font-size: 30px; /* Tamanho menor para telas pequenas */
+        white-space: nowrap; /* Mantém o texto em uma linha */
+        overflow: hidden; /* Garante que o texto não ultrapasse a tela */
+        width: 0; /* Reinicia a largura para a animação */
+        animation: typing 3s steps(30) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
+    }
+
+    #home .content p {
+        font-size: 18px; /* Tamanho menor para telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    #home .content h2 {
+        font-size: 24px; /* Tamanho ainda menor para telas muito pequenas */
+        animation: typing 2.5s steps(25) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
+    }
+
+    #home .content p {
+        font-size: 16px; /* Tamanho ainda menor para telas muito pequenas */
+    }
+}
+
+/* Seção Sobre */
+#descricao-missao-visao {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#descricao-missao-visao .descricao p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#descricao-missao-visao .missao-visao {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#descricao-missao-visao .missao, 
+#descricao-missao-visao .visao {
+    max-width: 450px;
+    margin: 0 15px;
+    text-align: left;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#descricao-missao-visao h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Seção Serviços */
+#servicos {
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+#servicos h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.servico {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.servico h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.servico p {
+    font-size: 1em;
+    color: #666;
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+}
+
+/* Seção Nossos Pacotes */
+#pacotes {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#pacotes h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.pacotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.pacote {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.pacote i {
+    font-size: 40px;
+    color: #f7d347;
+    margin-bottom: 15px;
+}
+
+.pacote h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.pacote .preco {
+    font-size: 1.2em;
+    color: #f7d347;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.pacote .descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.pacote ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.pacote ul li {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.pacote .perfeito-para {
+    font-size: 0.9em;
+    color: #333;
+    font-style: italic;
+}
+
+.pacote:hover {
+    transform: translateY(-10px);
+}
+
+/* Seção Galeria de Empresas Atendidas */
+#galeria {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.galeria-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Seção Contato */
+#contato {
+    background-color: #333;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contato-texto {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Formulário de Contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f7d347;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #f7d347;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+footer a {
+    color: #f7d347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f7d347;
+}
+
+.social-links a[aria-label="WhatsApp"]:hover {
+    color: #25D366; /* Verde do WhatsApp */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+}
